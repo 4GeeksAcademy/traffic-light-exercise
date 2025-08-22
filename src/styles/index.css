@@ -1,11 +1,80 @@
-/* 
+.traffic-light {
+    background-color: #333;
+    border-radius: 40px;
+    width: 200px;
+    height: 500px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+.light {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 3px solid #666;
+}
 
-*/
+.light.red {
+    background-color: #220000;
+}
+
+.light.yellow {
+    background-color: #222200;
+}
+
+.light.green {
+    background-color: #002200;
+}
+
+.light.red.glow {
+    background-color: #ff0000;
+    box-shadow: 
+        0 0 30px #ff0000,
+        0 0 60px #ff0000,
+        0 0 90px #ff0000;
+    border-color: #ff6666;
+}
+
+.light.yellow.glow {
+    background-color: #ffff00;
+    box-shadow: 
+        0 0 30px #ffff00,
+        0 0 60px #ffff00,
+        0 0 90px #ffff00;
+    border-color: #ffff66;
+}
+
+.light.green.glow {
+    background-color: #00ff00;
+    box-shadow: 
+        0 0 30px #00ff00,
+        0 0 60px #00ff00,
+        0 0 90px #00ff00;
+    border-color: #66ff66;
+}
+
+.light:hover {
+    transform: scale(1.05);
+    border-color: #999;
+}
+
+body {
+    background-color: #1a1a1a;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+#app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
